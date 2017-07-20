@@ -33,20 +33,13 @@ public class TagDataAdapter extends ArrayAdapter<ListData> {
         ListData listData = getItem(position);
         View view = LayoutInflater.from(getContext()).inflate(resourceid,null);
 
-        TextView lv_id = (TextView) view.findViewById(R.id.lv_id);
-        TextView lv_address = (TextView) view.findViewById(R.id.address);
-        TextView lv_elseText = (TextView) view.findViewById(R.id.elseText);
-        TextView lv_time = (TextView) view.findViewById(R.id.time);
-        TextView lv_date = (TextView) view.findViewById(R.id.date);
+        TextView textViewNoteText = (TextView) view.findViewById(R.id.textViewNoteText);
+        TextView textViewNoteComment = (TextView) view.findViewById(R.id.textViewNoteComment);
 
 
 
-        lv_id.setText(listData.getTagData().getId());
-        lv_address.setText(listData.getTagData().getAddress());
-        lv_elseText.setText(listData.getTagData().getIDItself());
-
-        lv_time.setText(listData.getTime());
-        lv_date.setText(listData.getDate());
+        textViewNoteText.setText(listData.getTagData().getId() +"   "+ listData.getTagData().getAddress() );
+        textViewNoteComment.setText("Added at "+listData.getTime()+" "+listData.getDate());
 
 
         return view;

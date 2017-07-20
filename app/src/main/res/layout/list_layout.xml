@@ -1,52 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height= "match_parent"
-    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:minHeight="?android:attr/listPreferredItemHeight"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:padding="12dp">
 
     <TextView
-        android:layout_width="60dp"
-        android:layout_height="match_parent"
-        android:id="@+id/lv_id"
-        android:textStyle="bold"
-        android:textSize="35sp"
-        android:gravity="center"
-        ></TextView>
+        android:id="@+id/textViewNoteText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        tools:text="Note Text" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/address"
-            android:textStyle="bold"
-            android:textSize="25sp"></TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:id="@+id/elseText"
-            android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:id="@+id/textViewNoteComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        tools:text="Note Comment" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_gravity="right"
-        android:gravity="right">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/time"></TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/date"></TextView>
-
-    </LinearLayout>
 
 
 </LinearLayout>

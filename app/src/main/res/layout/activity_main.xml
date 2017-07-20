@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,31 +10,42 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.chen.chennfctest1.MainActivity">
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/et1"
-        android:hint="发送内容"/>
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_write"
-        android:text="send" />
+        android:id="@+id/tv"/>
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/textViewNoteInstructions"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tv1"
-        android:hint="读取内容"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv2"
-        android:hint="读取内容对象..."/>
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lv"></ListView>
+        android:layout_alignParentRight="true"
+        android:text="点击查看详细信息"
+        android:textSize="12sp"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lv"
+            android:layout_below="@+id/textViewNoteInstructions"
+            ></ListView>
+        <TextView
+            android:id="@+id/noteText"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="将设备背面靠近标签读取"
+            android:layout_marginTop="200dp"
+            />
 
 
-</LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnsend"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:text="写入数据"
+        />
+
+</RelativeLayout>

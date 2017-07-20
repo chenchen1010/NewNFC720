@@ -17,6 +17,11 @@ public class ListData implements Serializable {
         this.date = date;
         this.time = time;
     }
+    public ListData(String IDItself,String address,String id,String date, String time) {
+        this.tagData = new TagData(IDItself,address,id);
+        this.date = date;
+        this.time = time;
+    }
 
     public TagData getTagData() {
         return tagData;
